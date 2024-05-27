@@ -1,0 +1,77 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@schema/schema-app": [
+        "libs/schema-app/src"
+      ],
+      "@schema/schema-app/*": [
+        "libs/schema-app/src/*"
+      ],
+      "@user-core/users": [
+        "libs/users/src"
+      ],
+      "@user-core/users/*": [
+        "libs/users/src/*"
+      ],
+      "@user-task/tasks": [
+        "libs/tasks/src"
+      ],
+      "@user-task/tasks/*": [
+        "libs/tasks/src/*"
+      ],
+      "@user-trans/transactions": [
+        "libs/transactions/src"
+      ],
+      "@user-trans/transactions/*": [
+        "libs/transactions/src/*"
+      ],
+      "@user-address/address": [
+        "libs/wallets/src"
+      ],
+      "@user-address/address/*": [
+        "libs/wallets/src/*"
+      ],
+      "@task-cron/task-cron": [
+        "libs/task-cron/src"
+      ],
+      "@task-cron/task-cron/*": [
+        "libs/task-cron/src/*"
+      ],
+      "@user-sniper/snipers": [
+        "libs/snipers/src"
+      ],
+      "@user-sniper/snipers/*": [
+        "libs/snipers/src/*"
+      ],
+      "@task-cro/cro-data": [
+        "libs/cro-data/src"
+      ],
+      "@task-cro/cro-data/*": [
+        "libs/cro-data/src/*"
+      ],
+      "@dex-sdk/dex-sdk": [
+        "libs/dex-sdk/src"
+      ],
+      "@dex-sdk/dex-sdk/*": [
+        "libs/dex-sdk/src/*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+services:
+  cenbot-cron:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.bot
+    env_file:
+      - .env
+    ports:
+      - 1521:1521
+    networks:
+      - cenbot_network
+
+  cronjob:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.cronjob
+    env_file:
+      - .env
+    ports:
+      - 1141:1141
+    networks:
+      - cenbot_network
+
+  query-events:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.events
+    env_file:
+      - .env
+    ports:
+      - 1013:1013
+    networks:
+      - cenbot_network
+
+networks:
+  cenbot_network:
+    driver: bridge

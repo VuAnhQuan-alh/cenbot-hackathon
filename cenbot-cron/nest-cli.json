@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/cenbot-cron/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/cenbot-cron/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/cenbot-cron",
+  "projects": {
+    "cenbot-cron": {
+      "type": "application",
+      "root": "apps/cenbot-cron",
+      "entryFile": "main",
+      "sourceRoot": "apps/cenbot-cron/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cenbot-cron/tsconfig.app.json"
+      }
+    },
+    "cronjob": {
+      "type": "application",
+      "root": "apps/cronjob",
+      "entryFile": "main",
+      "sourceRoot": "apps/cronjob/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cronjob/tsconfig.app.json"
+      }
+    },
+    "schema-app": {
+      "type": "library",
+      "root": "libs/schema-app",
+      "entryFile": "index",
+      "sourceRoot": "libs/schema-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/schema-app/tsconfig.lib.json"
+      }
+    },
+    "users": {
+      "type": "library",
+      "root": "libs/users",
+      "entryFile": "index",
+      "sourceRoot": "libs/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/users/tsconfig.lib.json"
+      }
+    },
+    "tasks": {
+      "type": "library",
+      "root": "libs/tasks",
+      "entryFile": "index",
+      "sourceRoot": "libs/tasks/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/tasks/tsconfig.lib.json"
+      }
+    },
+    "transactions": {
+      "type": "library",
+      "root": "libs/transactions",
+      "entryFile": "index",
+      "sourceRoot": "libs/transactions/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/transactions/tsconfig.lib.json"
+      }
+    },
+    "wallets": {
+      "type": "library",
+      "root": "libs/wallets",
+      "entryFile": "index",
+      "sourceRoot": "libs/wallets/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/wallets/tsconfig.lib.json"
+      }
+    },
+    "task-cron": {
+      "type": "library",
+      "root": "libs/task-cron",
+      "entryFile": "index",
+      "sourceRoot": "libs/task-cron/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/task-cron/tsconfig.lib.json"
+      }
+    },
+    "snipers": {
+      "type": "library",
+      "root": "libs/snipers",
+      "entryFile": "index",
+      "sourceRoot": "libs/snipers/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/snipers/tsconfig.lib.json"
+      }
+    },
+    "cro-data": {
+      "type": "library",
+      "root": "libs/cro-data",
+      "entryFile": "index",
+      "sourceRoot": "libs/cro-data/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cro-data/tsconfig.lib.json"
+      }
+    },
+    "dex-sdk": {
+      "type": "library",
+      "root": "libs/dex-sdk",
+      "entryFile": "index",
+      "sourceRoot": "libs/dex-sdk/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/dex-sdk/tsconfig.lib.json"
+      }
+    },
+    "query-events": {
+      "type": "application",
+      "root": "apps/query-events",
+      "entryFile": "main",
+      "sourceRoot": "apps/query-events/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/query-events/tsconfig.app.json"
+      }
+    }
+  }
+}

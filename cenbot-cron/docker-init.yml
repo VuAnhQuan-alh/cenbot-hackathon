@@ -1,0 +1,36 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: abc1235
+    volumes:
+      - mongodata:/data
+    networks:
+      - cenbot_network
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 1s
+      timeout: 2s
+      retries: 10
+    volumes:
+      - cache:/data/redis
+    networks:
+      - cenbot_network
+
+volumes:
+  mongodata:
+    driver: local
+  cache:
+    driver: local
+networks:
+  cenbot_network:
+    driver: bridge
